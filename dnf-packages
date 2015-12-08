@@ -32,3 +32,7 @@ xorg-x11-drv-evdev
 xorg-x11-drv-nouveau
 xorg-x11-server-Xorg
 xorg-x11-xinit
+gcc
+gcc-c++
+clang
+valgrind
