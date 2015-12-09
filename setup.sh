@@ -8,7 +8,7 @@ function install_packages() {
 	sudo dnf install $PACKAGES;
 }
 
-function install_dotfiles() {
+function install_home_files() {
 	for FILE in $(ls -a $BASE_PATH/home-files); do
 		
 		if [ "$FILE" == "." ] || [ "$FILE" == ".." ]; then
@@ -21,7 +21,7 @@ function install_dotfiles() {
 		if [ ! -e "$TARGET_FILE" ]; then
 			echo "Linking $SOURCE_FILE to $TARGET_FILE";
 			ln -s "$SOURCE_FILE" "$TARGET_FILE";
-		elif [ "$REPLACE_CONFIG_FILES" == "y" ]; then
+		elif [ "$REPLACE_HOME_FILES" == "y" ]; then
 			echo "Deleting $TARGET_FILE";
 			rm "$TARGET_FILE";
 			echo "Linking $SOURCE_FILE to $TARGET_FILE";
@@ -47,10 +47,10 @@ else
 	echo "Skipping package installation";
 fi;
 
-read -p "Setup the home config files? (y/n): " INSTALL_CONFIG_FILES;
-if [ "$INSTALL_CONFIG_FILES" == "y" ]; then
-	read -p "Replace existing config files? (y/n): " REPLACE_CONFIG_FILES;
-	install_dotfiles;
+read -p "Setup the home config files? (y/n): " INSTALL_HOME_FILES;
+if [ "$INSTALL_HOME_FILES" == "y" ]; then
+	read -p "Replace existing config files? (y/n): " REPLACE_HOME_FILES;
+	install_home_files;
 else
 	echo "Skipping config file installation";
 fi;
