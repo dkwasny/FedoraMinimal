@@ -33,7 +33,7 @@ function install_home_files() {
 	done;
 }
 
-BASE_PATH=$(dirname $0)
+BASE_PATH="$(dirname $0)";
 
 read -p "Perform a dnf update? (y/n): " DNF_UPDATE;
 if [ "$DNF_UPDATE" == "y" ]; then
@@ -43,14 +43,10 @@ fi;
 read -p "Install all the dnf packages? (y/n): " INSTALL_PACKAGES;
 if [ "$INSTALL_PACKAGES" == "y" ]; then
 	install_packages;
-else
-	echo "Skipping package installation";
 fi;
 
 read -p "Setup the home config files? (y/n): " INSTALL_HOME_FILES;
 if [ "$INSTALL_HOME_FILES" == "y" ]; then
 	read -p "Replace existing config files? (y/n): " REPLACE_HOME_FILES;
 	install_home_files;
-else
-	echo "Skipping config file installation";
 fi;
