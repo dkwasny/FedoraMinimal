@@ -18,7 +18,7 @@ function install_home_files() {
 		SOURCE_FILE="$(realpath $BASE_PATH/home-files/$FILE)";	
 		TARGET_FILE="$HOME/$FILE";
 		
-		if [ ! -e "$TARGET_FILE" ]; then
+		if [ ! -e "$TARGET_FILE" ] && [ ! -L "$TARGET_FILE" ]; then
 			echo "Linking $SOURCE_FILE to $TARGET_FILE";
 			ln -s "$SOURCE_FILE" "$TARGET_FILE";
 		elif [ "$REPLACE_HOME_FILES" == "y" ]; then

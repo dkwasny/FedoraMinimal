@@ -36,3 +36,4 @@ gcc
 gcc-c++
 clang
 valgrind
+chrony
