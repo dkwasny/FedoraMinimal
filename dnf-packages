@@ -38,3 +38,4 @@ clang
 valgrind
 chrony
 gdisk
+wget
