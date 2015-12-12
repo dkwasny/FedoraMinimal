@@ -37,3 +37,4 @@ gcc-c++
 clang
 valgrind
 chrony
+gdisk
