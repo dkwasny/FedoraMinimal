@@ -15,4 +15,4 @@ A list of packages I have explicitly installed.
 
 Credits
 -------
-I snagged the urxvt solarized dark theme from [the solarized repo](https://github.com/solarized/xresources).
+I snagged the urxvt and vim solarized dark themes from [the solarized repo](https://github.com/altercation/solarized).
