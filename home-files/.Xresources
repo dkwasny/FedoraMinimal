@@ -1,5 +1,5 @@
 ! Custom fonts
-URxvt.font: xft:Inconsolata
+URxvt.font: xft:DejaVu Sans Mono
 
 ! Solarized Dark Color Scheme
 #define S_base03        #002b36
