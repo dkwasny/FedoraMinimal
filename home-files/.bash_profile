@@ -6,9 +6,8 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-PATH=$PATH:$HOME/.local/bin:$HOME/bin
-export PATH
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export EDITOR=vim
+export VISUAL=$EDITOR
 
 eval $(ssh-agent -s)
-
-startx

@@ -39,3 +39,4 @@ valgrind
 chrony
 gdisk
 wget
+vim-nerdtree
